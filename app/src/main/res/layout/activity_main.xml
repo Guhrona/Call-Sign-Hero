@@ -22,8 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="@string/et_hint"
-            android:text="@={viewmodel.callsign}"
-            android:inputType="numberPassword" />
+            android:text="@={viewmodel.callsign}" />
 
         <Button
             android:onClick="@{viewmodel::onSearchButtonClicked}"
