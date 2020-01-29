@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Call Sign Hero</string>
+    <string name="status">status: %s</string>
+    <string name="current_callsign">current callsign: %s</string>
+    <string name="current_operclass">current operClass: %s</string>
+    <string name="previous_callsign">previous callsign: %s</string>
+    <string name="previous_operclass">prevoious operClass: %s</string>
+    <string name="trustee_callsign">trustee callsign: %s</string>
+    <string name="trustee_name">trustee name: %s</string>
+    <string name="name">name: %s</string>
+    <string name="address_line1">address line1: %s</string>
+    <string name="address_line2">address line2: %s</string>
+    <string name="address_attn">address attn: %s</string>
+    <string name="location_latitude">location latitude: %s</string>
+    <string name="location_longitude">location longitude: %s</string>
+    <string name="location_gridsquare">location gridsquare: %s</string>
+    <string name="other_info_grant_date">other info grant date: %s</string>
+    <string name="other_info_expiry_date">other info expiry date: %s</string>
+    <string name="other_info_last_action_date">other info last action date: %s</string>
+    <string name="other_info_frn">other info frn: %s</string>
+    <string name="other_info_uls_url">other info uls url: %s</string>
+    <string name="et_hint">Enter a call sign..</string>
 </resources>
