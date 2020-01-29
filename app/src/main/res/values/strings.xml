@@ -20,4 +20,5 @@
     <string name="other_info_frn">other info frn: %s</string>
     <string name="other_info_uls_url">other info uls url: %s</string>
     <string name="et_hint">Enter a call sign..</string>
+    <string name="search">Search</string>
 </resources>
