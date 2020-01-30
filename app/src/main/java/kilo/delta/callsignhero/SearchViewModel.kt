@@ -20,6 +20,6 @@ class SearchViewModel: ViewModel() {
 
             //FIXME - bad practice just use for now
             val searchResponse = SearchRepository().userSearch(callsign!!)
-            searchListener?.onSuccess(searchResponse)
+            searchListener?.onSuccess(searchResponse.blockingGet())
         }
 }
