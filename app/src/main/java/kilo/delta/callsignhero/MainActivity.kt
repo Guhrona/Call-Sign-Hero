@@ -11,11 +11,19 @@ import kilo.delta.callsignhero.util.hide
 import kilo.delta.callsignhero.util.show
 import kilo.delta.callsignhero.util.toast
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 class MainActivity : AppCompatActivity(), SearchListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        startKoin {
+            androidLogger()
+            androidContext(this@MainActivity)
+            modules(listOf()) //TODO - create modules
+        }
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val viewModel = ViewModelProviders.of(this).get(SearchViewModel::class.java)
@@ -31,7 +39,7 @@ class MainActivity : AppCompatActivity(), SearchListener {
     override fun onSuccess(searchResponse: LiveData<String>) {
         progress_bar.hide()
         searchResponse.observe(this, Observer {
-            toast(it)
+            tvResponse.text = it
         })
     }
 

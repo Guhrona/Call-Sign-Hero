@@ -9,9 +9,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SearchRepository {
-    fun userSearch(callsign: String): LiveData<String> {
+   fun userSearch(callsign: String): LiveData<String> {
 
-        val searchResponse = MutableLiveData<String>()
+       val searchResponse = MutableLiveData<String>()
 
         //TODO - bad practice inject this later
         MyApi().userSearch(callsign)

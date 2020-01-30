@@ -17,11 +17,9 @@ class SearchViewModel: ViewModel() {
                 searchListener?.onFailure("You need to enter a call sign to search.")
                 return
             }
-            //searchListener?.onSuccess(searchResponse)
 
             //FIXME - bad practice just use for now
             val searchResponse = SearchRepository().userSearch(callsign!!)
             searchListener?.onSuccess(searchResponse)
-            //Timber.d("searchResponse = %s", searchResponse)
         }
 }
