@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
-            type="kilo.delta.callsignhero.SearchViewModel"/>
+            type="kilo.delta.callsignhero.SearchViewModel" />
     </data>
 
     <LinearLayout
@@ -25,138 +26,168 @@
             android:text="@={viewmodel.callsign}" />
 
         <Button
-            android:onClick="@{viewmodel::onSearchButtonClicked}"
             android:id="@+id/searchButton"
-            android:text="@string/search"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="@{viewmodel::onSearchButtonClicked}"
+            android:text="@string/search" />
 
+        <!--TODO - create a better layout-->
         <TextView
-            android:id="@+id/tvResponse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <!--TODO - create a better layout, map responses to it -->
-        <!--<TextView
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/status" />
+            android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tvCurrentCallsign"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/current_callsign" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvCurrentOperClass"
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/type" />
+
+            <TextView
+                android:id="@+id/tvCurrentCallsign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/current_callsign" />
+
+            <TextView
+                android:id="@+id/tvCurrentOperClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/current_operclass" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/current_operclass" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameAddressHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Name + Address" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAddressLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAddressLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAddressAttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locationHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Location" />
+
+            <TextView
+                android:id="@+id/tvLocationLatitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvLocationLongitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvLocationGridsquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/otherInfoHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Other License Info" />
+
+            <TextView
+                android:id="@+id/tvOtherInfoGrantDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvOtherInfoExpiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvOtherInfoLastActionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvOtherInfoFrn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvOtherInfoUlsUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvPreviousCallSign"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/previous_callsign" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvPreviousOperClass"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/previous_operclass" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvTrusteeCallSign"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/trustee_callsign" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvTrusteeName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/trustee_name" />
-
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/name" />
-
-        <TextView
-            android:id="@+id/tvAddressLine1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/address_line1" />
-
-        <TextView
-            android:id="@+id/tvAddressLine2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/address_line2" />
-
-        <TextView
-            android:id="@+id/tvAddressAttn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/address_attn" />
-
-        <TextView
-            android:id="@+id/tvLocationLatitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location_latitude" />
-
-        <TextView
-            android:id="@+id/tvLocationLongitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location_longitude" />
-
-        <TextView
-            android:id="@+id/tvLocationGridsquare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location_gridsquare" />
-
-        <TextView
-            android:id="@+id/tvOtherInfoGrantDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_info_grant_date" />
-
-        <TextView
-            android:id="@+id/tvOtherInfoExpiryDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_info_expiry_date" />
-
-        <TextView
-            android:id="@+id/tvOtherInfoLastActionDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_info_last_action_date" />
-
-        <TextView
-            android:id="@+id/tvOtherInfoFrn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_info_frn" />
-
-        <TextView
-            android:id="@+id/tvOtherInfoUlsUrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_info_uls_url" />-->
+            android:layout_height="wrap_content" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
-            android:visibility="invisible"
-            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="invisible" />
 
     </LinearLayout>
 </layout>

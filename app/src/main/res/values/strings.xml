@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Call Sign Hero</string>
     <string name="status">status: %s</string>
+    <string name="type">type: %s</string>
     <string name="current_callsign">current callsign: %s</string>
     <string name="current_operclass">current operClass: %s</string>
     <string name="previous_callsign">previous callsign: %s</string>
